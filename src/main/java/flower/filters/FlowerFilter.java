@@ -24,7 +24,7 @@ public class FlowerFilter implements SearchFilter {
 
     /** match item with price and number of flowers. */
     @Override
-    public final boolean match(Item item) {
+    public boolean match(final Item item) {
 
         boolean price = false;
         boolean numOfFlower = false;
