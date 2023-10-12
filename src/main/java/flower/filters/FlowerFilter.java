@@ -9,13 +9,18 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class FlowerFilter implements SearchFilter {
 
+    /** minimum price of bucket */
     private static final double MIN_PRICE = 0;
+    /** maximum price of bucket */ 
     private static final double MAX_PRICE = 5000;
+    /** minimum number of flowers in bucket */ 
     private static final int MIN_NUM_FLOWERS = 0;
-    private static final int MAX_NUB_FLOWERS = 1000;
+    /** maximum number of flower in bucket */
+    private static final int MAX_NUM_FLOWERS = 1000;
 
+    /** match item with price and number of flowers */
     @Override
-    public boolean match(Item item) {
+    public final boolean match(Item item) {
 
         boolean price = false;
         boolean numOfFlower = false;
@@ -33,7 +38,7 @@ public class FlowerFilter implements SearchFilter {
         List<?> flowerPack = bucket.getflowerPacks();
 
         if ((flowerPack.size() >= MIN_NUM_FLOWERS)
-                && (flowerPack.size() <= MAX_NUB_FLOWERS)) {
+                && (flowerPack.size() <= MAX_NUM_FLOWERS)) {
             numOfFlower = true;
         }
 
