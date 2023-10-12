@@ -7,10 +7,10 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class FlowerFilter implements SearchFilter {
 
-    private double minPrice = 0;
-    private double maxPrice = 5000;
-    private int minNumFlowers = 0;
-    private int maxNumFlowers = 1000;
+    private static final double minPrice = 0;
+    private static final double maxPrice = 5000;
+    private static final int minNumFlowers = 0;
+    private static final int maxNumFlowers = 1000;
 
     @Override
     public boolean match(Item item) {
