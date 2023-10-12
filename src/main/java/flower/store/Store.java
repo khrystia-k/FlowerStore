@@ -4,10 +4,13 @@ import java.util.List;
 
 import flower.filters.SearchFilter;
 import flower.item.Item;
+import lombok.Getter;
+
 import java.util.ArrayList;
 
 public class Store {
-    public List<Item> items;
+    @Getter
+    private List<Item> items;
 
     public List<Item> search(SearchFilter searchFilter) {
 

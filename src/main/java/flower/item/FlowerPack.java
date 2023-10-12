@@ -1,7 +1,6 @@
 package flower.item;
 
 import lombok.Getter;
-import lombok.Setter;
 
 public class FlowerPack {
     @Getter
