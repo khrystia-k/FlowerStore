@@ -30,7 +30,7 @@ public class FlowerFilter implements SearchFilter {
             price = true;
         }
 
-        List< ? > flowerPack = bucket.getflowerPacks();
+        List<?> flowerPack = bucket.getflowerPacks();
 
         if ((flowerPack.size() >= MIN_NUM_FLOWERS)
                 && (flowerPack.size() <= MAX_NUB_FLOWERS)) {
