@@ -20,7 +20,7 @@ public class FlowerFilter implements SearchFilter {
         boolean price = false;
         boolean numOfFlower = false;
 
-        if (item instanceof FlowerBucket != true) {
+        if (!(item instanceof FlowerBucket)) {
             return false;
         }
 
@@ -30,7 +30,7 @@ public class FlowerFilter implements SearchFilter {
             price = true;
         }
 
-        List<?> flowerPack = bucket.getflowerPacks();
+        List< ? > flowerPack = bucket.getflowerPacks();
 
         if ((flowerPack.size() >= MIN_NUM_FLOWERS)
                 && (flowerPack.size() <= MAX_NUB_FLOWERS)) {
